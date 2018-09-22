@@ -79,6 +79,7 @@
     padding: 0 60px;
     background: white;
     /* align-items: center; */
+    transition: 0.5s;
 }
 .menu .form {
     position: relative;
@@ -134,6 +135,65 @@
 .header .sticky + .body-container {
    padding-top: 74px;
 }
+.menu-area .menu-bar .icon-menu{
+    display: none;
+}
+
+@media(max-width: 830px){
+.menu-bar li a {
+    display: none;
+    line-height: 45px;
+}
+.menu-area .menu-bar .icon-menu{
+    display: block;
+    float: right;
+    cursor: pointer;
+}
+.menu-responsive li a{
+    display: block;
+    line-height: 45px;
+}
+.menu-responsive {
+    display: flex;
+    flex-direction: column;
+    background: white;
+    /* width: 200px; */
+    align-items: start;
+    justify-content: start;
+}  
+.menu-area  ul{
+    margin-bottom: 0rem;
+} 
+
+.menu {
+    display:  grid;
+    grid-template-columns: 20% 80%;
+    height: auto;
+    border: 1px solid #ddd;
+    padding: 0 60px;
+    background: white;
+    /* align-items: center; */
+    padding: 0 20px;
+}
+.logo {display: flex;align-items: start;grid-column: 2;justify-self: end;}
+.menu-area {
+    display:  block;
+    justify-content:  flex-end;
+    align-items: start;
+    /* grid-area: col-end; */
+    grid-column: 1;
+    grid-row: 1;
+}
+.search-bar {
+    display: none;
+}
+.top-header {
+    padding: 0px 0;
+    grid-template-columns: 60% 40%;
+}
+}
+
+/* //////// */
 
 /* ....HEADER.... */
 
@@ -207,33 +267,60 @@ img.image-4 {
     right: 333px;
 }
 
+@media(max-width: 830px) {
+      
+    img.image-1 {
+        display: none;
+    }
+    
+    img.image-2 {
+        display: none;
+    }
+    
+    img.image-3 {
+        display: none;
+    }
+    
+    img.image-4 {
+        display: none;
+    }
+    .cover-banner .banner img{
+        height: 350px;
+    }
+    
+}
 /* COVER BANNER */
 
 /* SMALL BANNER TOP */
 .small-banner-container {
-    height: 216px;
+    /* height: 216px; */
     width: 100%;
     display: grid;
     grid-template-columns:  70% 30%;
     background: #1CCDCA;
     align-items: center;
     box-sizing: border-box;
+    padding: 50px 0;
+    justify-content: center;
 }
 
-.text-container {}
 
-.small-banner-container .text-container {
-    padding-left: 50px;
-    padding-right: 20px;
+.banner-text-container{
+    display: flex;
+    flex-direction: column;
+    /* align-items: center; */
+    justify-content: center;
+    padding: 0 50px;
     color: white;
 }
 
-.small-banner-container .text-container h1 {
+
+.small-banner-container .banner-text-container h1 {
     font-size: 25px;
     font-weight: 400;
 }
 
-.small-banner-container .text-container p {
+.small-banner-container .banner-text-container p {
     font-size: 14px;
     font-weight: 400;
 }
@@ -294,7 +381,7 @@ img.image-4 {
     display: flex;
     justify-content: center;
     padding-top: 50px;
-    /* margin: 0 auto; */
+    margin: 0 auto;
     flex-direction: column;
 }
 
@@ -311,6 +398,31 @@ img.image-4 {
     width: 400px;
     display: block;
     position: relative;
+}
+@media(max-width: 700px){
+    .small-banner-container{
+        grid-template-columns: 60% 40%;
+    }
+    .button-container {
+        justify-self: center;
+    }
+    .button-container button span {
+        font-size: 12px;
+        padding: 5px;
+    }
+    .button-container button i{
+        padding: 5px;
+    }
+}
+@media(max-width: 550px){
+    .small-banner-container{
+        display: block;
+        text-align: center;
+    }
+    .button-container {
+        display: flex;
+        justify-content: center;
+    }
 }
 
 
@@ -461,6 +573,34 @@ i.fas.fa-cut {
 
 i.fas.fa-key {
     background: #E85F1B;
+}
+@media(max-width: 970px){
+    .builder-row .row {
+        grid-template-columns: 50% 50%;
+        grid-row-gap: 90px;
+    }
+    .builder-row .row .item .style01{
+        width: 80%;
+    }
+}
+@media(max-width: 668px){
+    .builder-row .row {
+        grid-template-columns:100%;
+        grid-row-gap: 90px;
+    }
+    .builder-row .row .item {
+        display: flex;
+        justify-content: center;
+    }
+    .builder-row .row .item .style01{
+        width: 70%;
+    }
+}
+@media(max-width: 480px){
+    
+    .builder-row .row .item .style01{
+        width: 100%;
+    }
 }
 /* ABOUT ENAR */
 
@@ -865,7 +1005,21 @@ i.fas.fa-key {
     font-size:  12px;
     margin:  10px 0;
 }
-
+@media(max-width: 986px){
+    .meet-our-team {
+        grid-template-columns: 33% 33% 33%;
+    }
+}
+@media(max-width: 775px){
+    .meet-our-team {
+        grid-template-columns: 50% 50%;
+    }
+}
+@media(max-width: 515px){
+    .meet-our-team {
+        grid-template-columns: 100%;
+    }
+}
 /* TEAM MEMBER */
 
 /* WHY CHOOSE US */
@@ -882,7 +1036,7 @@ i.fas.fa-key {
 }
 
 .why-choose-us-container {
-    width:  1140px;
+    /* width:  1140px; */
     margin: auto;
 }
 
@@ -901,8 +1055,8 @@ i.fas.fa-key {
 }
 .why-choose-us-content img {
     float:  left;
-    width: 460px;
-    height: auto;
+    /* width: 460px; */
+    height: 236px;
     vertical-align: middle;
     margin-right: 20px;
 }
@@ -926,6 +1080,14 @@ button.btn.why-choose-us-btn:hover {
 .hightlight {
     border:2px solid #1CCDCA !important;
 
+}
+@media(max-width: 520px){
+    button.btn.why-choose-us-btn {
+        font-size: 12px;
+    }
+    .why-choose-us-button .btn{
+        padding: 5px;
+    }
 }
 /* WHY CHOOSE US */
 

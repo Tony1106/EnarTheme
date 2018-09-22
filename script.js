@@ -3,6 +3,18 @@
      
 let buttons = document.querySelectorAll(".why-choose-us-button button");
 
+myFunction = ()=>{
+
+        
+        if($('#navbar ul').hasClass('menu-responsive')) {
+            $('#navbar ul').removeClass('menu-responsive')
+        } else {
+            $('#navbar ul').addClass('menu-responsive');
+        }
+        
+    
+}
+
 for (let index = 0; index< buttons.length; index++) {
 
     buttons[index].onclick = function(){
